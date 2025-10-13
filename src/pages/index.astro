@@ -1,11 +1,487 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/global.css";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<header
+  class="fixed top-0 inset-x-0 z-50 bg-white backdrop-blur border-b border-white/10"
+  x-data="{ mobileNavOpen: false }"
+>
+  <nav
+    class="container mx-auto max-w-screen-xl px-4 h-16 lg:h-20 flex items-center"
+  >
+    <a href="#" class="inline-flex items-center gap-2" aria-label="Home">
+      <img
+        src="../../public/images/TOP-SHELF-Advertising.webp"
+        class="h-10 w-auto"
+        alt="Brand"
+      />
+    </a>
+    <ul class="hidden lg:flex ml-auto mr-6 items-center gap-8">
+      <li>
+        <a
+          href="#"
+          class="text-md text-[#15164c] font-semibold hover:text-white transition"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="text-md text-[#15164c] font-semibold hover:text-white transition"
+          >Indoor Billboards</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="text-md text-[#15164c] font-semibold hover:text-white transition"
+          >Solutions</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="text-md text-[#15164c] font-semibold hover:text-white transition"
+          >About Us</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="text-md text-[#15164c] font-semibold hover:text-white transition"
+          >Contact Us</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<section class="relative bg-white py-15 md:py-28 lg:py-25">
+  <div
+    class="pointer-events-none absolute inset-0 z-0 opacity-60
+           bg-center bg-no-repeat
+           bg-[url('/images/online-banking-2.webp')]
+           [background-size:100%_40%]"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="relative z-10 container mx-auto max-w-screen-xl px-4">
+    <div
+      class="flex flex-wrap md:flex-nowrap items-center gap-10 lg:gap-16 min-h-[20vh] lg:min-h-[50vh]"
+    >
+      <!-- Left -->
+      <div class="w-full md:w-1/2 flex flex-col justify-center">
+        <span
+          class="w-fit self-start mb-6 inline-flex items-center rounded-full bg-[#9bb2f4] text-[#15164c] px-4 py-1 text-sm"
+        >
+          Premium Marketing Solutions
+        </span>
+
+        <h1
+          class="text-[#15164c] font-bold leading-tight tracking-tight text-3xl md:text-4xl lg:text-5xl"
+        >
+          Local Advertising and Digital Marketing Pros in
+          <span class="text-[#3b5de7]">Denver</span>
+        </h1>
+
+        <p class="mt-6 text-xl md:text-2xl text-[#15164c]/80 max-w-2xl">
+          Helping Businesses Get Noticed On Screens and Online
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center h-12 px-6 rounded-lg bg-[#1d3dd1] text-white text-sm md:text-base font-semibold hover:bg-[#1833b2] transition"
+          >
+            Contact Our Advertising Experts
+          </a>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+        <div class="relative w-[22rem] sm:w-[26rem] md:w-[32rem] lg:w-[36rem]">
+          <div
+            class="absolute inset-0 -z-10 hidden md:block rounded-3xl bg-[#15164c] opacity-90 rotate-[-3deg]"
+          >
+          </div>
+          <img
+            src="/images/download-5-1.avif"
+            alt="Digital signage montage"
+            class="block w-full h-auto rounded-3xl shadow-xl object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-[90px] bg-[#141a56]">
+  <div class="container mx-auto px-4">
+    <div class="max-w-7xl mx-auto flex flex-row gap-20">
+      <!-- LEFT: cards -->
+      <div class="w-1/2">
+        <div class="-m-1 flex flex-wrap">
+          <div class="w-full sm:w-1/2 p-1">
+            <div
+              class="h-full min-h-[140px] rounded-lg bg-[#f6f9fe] p-6 sm:p-8 flex items-center justify-center text-center"
+            >
+              <p class="text-black text-xl">
+                Ads displayed on indoor digital screens in high-traffic venues.
+              </p>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 p-1">
+            <div
+              class="h-full min-h-[140px] rounded-lg bg-[#afc5f4] p-6 sm:p-8 flex items-center justify-center text-center"
+            >
+              <p class="text-black text-xl">
+                Targeted placements by neighborhood, audience, or venue type.
+              </p>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 p-1">
+            <div
+              class="h-full min-h-[140px] rounded-lg bg-[#afc5f4] p-6 sm:p-8 flex items-center justify-center text-center"
+            >
+              <p class="text-black text-xl">
+                Flexible content scheduling and campaign reporting.
+              </p>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 p-1">
+            <div
+              class="h-full min-h-[140px] rounded-lg bg-[#f6f9fe] p-6 sm:p-8 flex items-center justify-center text-center"
+            >
+              <p class="text-black text-xl">Custom motion-graphic designs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- RIGHT: text -->
+      <div class="w-full md:w-1/2 flex flex-col justify-center">
+        <h2 class="text-4xl font-bold leading-tight text-white text-left">
+          Reach Customers with
+          <span class="text-[#3b5de7]">Indoor Digital Signage</span>
+          Across
+          <span class="text-[#3b5de7]">Denver</span>
+        </h2>
+        <p class="mt-4 text-xl text-white/80 text-left">
+          Our (CITY) based indoor advertising network puts your brand in front
+          of real people in real venues restaurants, gyms, salons, retail
+          spaces, and more. Whether you are promoting daily specials or building
+          brand awareness, our digital signage network delivers impactful,
+          highfrequency exposure where it matters most.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center h-12 px-6 rounded-lg bg-[#0a379d] text-white text-sm md:text-base font-semibold hover:bg-[#1833b2] transition"
+          >
+            Explore Our Digital Ad Services
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="relative bg-[#e0edf6] py-15 md:py-28 lg:py-25">
+  <div class="relative z-10 container mx-auto max-w-screen-xl px-4">
+    <div
+      class="flex flex-wrap md:flex-nowrap items-center gap-10 lg:gap-16 min-h-[20vh] lg:min-h-[50vh]"
+    >
+      <!-- Left -->
+      <div class="w-full md:w-1/2 flex flex-col justify-center">
+        <h2
+          class="text-[#15164c] font-bold leading-tight tracking-tight text-3xl"
+        >
+          Venue Partner Network
+        </h2>
+
+        <p class="mt-6 text-xl md:text-2xl text-[#15164c]/80 max-w-2xl">
+          Our mission is to help local businesses like yours reach their
+          audience. Every month, millions of consumers see our screens and
+          remember them. <br />
+          <br /> Join the network of businesses that are prioritizing hyper-local
+          advertising!
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center h-12 px-6 rounded-lg bg-[#1d3dd1] text-white text-sm md:text-base font-semibold hover:bg-[#1833b2] transition"
+          >
+            Become a Venue Partner
+          </a>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+        <div class="relative w-[22rem] sm:w-[26rem] md:w-[32rem] lg:w-[36rem]">
+          <div
+            class="absolute inset-0 -z-10 hidden md:block rounded-3xl bg-[#15164c] opacity-90 rotate-[-3deg]"
+          >
+          </div>
+          <img
+            src="/images/download-3 (1).avif"
+            alt="Digital signage montage"
+            class="block w-full h-auto rounded-3xl shadow-xl object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="relative bg-white py-15 md:py-28 lg:py-25">
+  <div class="relative z-10 container mx-auto max-w-screen-xl px-4">
+    <div
+      class="flex flex-wrap md:flex-nowrap items-center gap-10 lg:gap-16 min-h-[20vh] lg:min-h-[50vh]"
+    >
+      <!-- Left -->
+      <div class="w-full md:w-1/2 flex flex-col justify-center">
+        <h2
+          class="text-[#15164c] font-bold leading-tight tracking-tight text-3xl"
+        >
+          Why Denver Businesses Choose Us
+        </h2>
+
+        <p class="mt-6 text-xl md:text-2xl text-[#15164c]/80 max-w-2xl">
+          Our mission is to help local businesses like yours reach their
+          audience. Every month, millions of consumers see our screens and
+          remember them. <br />
+          <br />Our combined expertise in indoor signage and digital strategy
+          gives businesses like yours the visibility you deserve.
+        </p>
+      </div>
+
+      <!-- Right -->
+      <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+        <div class="relative w-[22rem] sm:w-[26rem] md:w-[32rem] lg:w-[36rem]">
+          <div
+            class="absolute inset-0 -z-10 hidden md:block rounded-3xl bg-[#15164c] opacity-90 rotate-[-3deg]"
+          >
+          </div>
+          <img
+            src="/images/test.webp"
+            alt="Digital signage montage"
+            class="block w-full h-auto rounded-3xl shadow-xl object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-12">
+  <div class="relative z-10 container mx-auto max-w-screen-xl px-4">
+    <!-- Card -->
+    <div
+      class="rounded-3xl bg-gradient-to-b from-[#0F3DA3] to-[#11184A]
+             p-8 sm:p-12 lg:p-16 shadow-xl shadow-black/20"
+    >
+      <div class="mx-auto text-center">
+        <h2
+          class="text-white font-bold tracking-tight
+                 text-4xl"
+        >
+          Let's Put Your Brand Where People Cannot Miss It
+        </h2>
+
+        <p class="mt-6 text-white/85 text-lg sm:text-xl leading-relaxed">
+          Ready to amplify your local reach? Whether it's a screen in a
+          restaurant or a click on Google, we help you meet your next customer
+          wherever they are.
+        </p>
+
+        <div class="mt-10 flex justify-center">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center rounded-xl
+                   h-12 px-6 text-white text-sm sm:text-base font-semibold
+                   border border-white/80 hover:border-white
+                   hover:bg-[#2ea3f2] transition"
+          >
+            Contact our Advertising Experts
+            <svg
+              class="ml-2 h-4 w-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20" x-data="{ category: 'general' }">
+  <!-- Wider container: up to ~1440px, with comfy side padding -->
+  <div class="mx-auto px-4 md:px-8 lg:px-16 max-w-[90rem]">
+    <!-- Heading -->
+    <div class="mx-auto max-w-7xl text-center mb-16">
+      <h2 class="mt-2 mb-4 text-5xl font-bold leading-tight text-black">
+        FAQs
+      </h2>
+    </div>
+
+    <!-- Accordion list (wider) -->
+    <div class="relative mx-auto max-w-7xl">
+      <ul class="relative space-y-4">
+        <!-- Item 1 -->
+        <li class="p-1 border border-white/20 rounded-2xl">
+          <div
+            class="px-6 py-8 bg-[#e0edf6] border border-white/20 rounded-xl"
+            x-data="{ accordion: false }"
+          >
+            <button
+              class="group w-full flex justify-between items-center text-left font-medium"
+              @click="accordion = !accordion"
+            >
+              <span class="text-lg font-medium text-black">
+                Fusce eget nunc et libero accumsan rutrum quis nec lectus?
+              </span>
+              <span
+                :class="{'rotate-180': accordion}"
+                class="inline-block transform transition-transform duration-200"
+              >
+                <svg
+                  class="flex-shrink-0 w-4 h-4 ml-2 text-black"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </span>
+            </button>
+
+            <div
+              x-ref="c1"
+              :style="accordion ? 'height:' + $refs.c1.scrollHeight + 'px' : ''"
+              class="overflow-hidden h-0 duration-500 ease-in-out"
+            >
+              <p class="mt-2 w-full text-lg leading-loose text-neutral-800">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                euismod orci sed tristique placerat. Fusce in ligula urna. Fusce
+                eget nunc et libero accumsan rutrum quis nec lectus. Quisque
+                luctus sem nibh, quis ornare neque consectetur varius.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <!-- Item 2 -->
+        <li class="p-1 border border-white/20 rounded-2xl">
+          <div
+            class="px-6 py-8 bg-[#e0edf6] border border-white/20 rounded-xl"
+            x-data="{ accordion: false }"
+          >
+            <button
+              class="group w-full flex justify-between items-center text-left font-medium"
+              @click="accordion = !accordion"
+            >
+              <span class="text-lg font-medium text-black">
+                Donec sed leo sit amet ante ornare laoreet in quis est?
+              </span>
+              <span
+                :class="{'rotate-180': accordion}"
+                class="inline-block transform transition-transform duration-200"
+              >
+                <svg
+                  class="flex-shrink-0 w-4 h-4 ml-2 text-black"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </span>
+            </button>
+
+            <div
+              x-ref="c2"
+              :style="accordion ? 'height:' + $refs.c2.scrollHeight + 'px' : ''"
+              class="overflow-hidden h-0 duration-500 ease-in-out"
+            >
+              <p class="mt-2 w-full text-lg leading-loose text-neutral-800">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                quis ultricies est. Integer massa libero, ornare ut leo nec,
+                scelerisque rutrum elit. Morbi et massa id ipsum lobortis
+                rhoncus. Suspendisse ultrices ut lectus non laoreet.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <!-- Item 3 -->
+        <li class="p-1 border border-white/20 rounded-2xl">
+          <div
+            class="px-6 py-8 bg-[#e0edf6] border border-white/20 rounded-xl"
+            x-data="{ accordion: false }"
+          >
+            <button
+              class="group w-full flex justify-between items-center text-left font-medium"
+              @click="accordion = !accordion"
+            >
+              <span class="text-lg font-medium text-black">
+                Mauris vitae ex ut lectus cursus ornare?
+              </span>
+              <span
+                :class="{'rotate-180': accordion}"
+                class="inline-block transform transition-transform duration-200"
+              >
+                <svg
+                  class="flex-shrink-0 w-4 h-4 ml-2 text-black"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </span>
+            </button>
+
+            <div
+              x-ref="c3"
+              :style="accordion ? 'height:' + $refs.c3.scrollHeight + 'px' : ''"
+              class="overflow-hidden h-0 duration-500 ease-in-out"
+            >
+              <p class="mt-2 w-full text-lg leading-loose text-neutral-800">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                sit amet porta nulla, quis varius risus. Suspendisse tempus erat
+                non dui volutpat eleifend. Praesent non lectus porttitor, ornare
+                neque, hendrerit enim.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
