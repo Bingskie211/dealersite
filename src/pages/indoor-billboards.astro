@@ -19,14 +19,14 @@ import "../styles/global.css";
     <ul class="hidden lg:flex ml-auto mr-6 items-center gap-8">
       <li>
         <a
-          href="./index"
+          href="#"
           class="text-md text-[#15164c] font-semibold hover:text-white transition"
           >Home</a
         >
       </li>
       <li>
         <a
-          href="./indoor-billboards"
+          href="#"
           class="text-md text-[#15164c] font-semibold hover:text-white transition"
           >Indoor Billboards</a
         >
@@ -56,138 +56,44 @@ import "../styles/global.css";
   </nav>
 </header>
 
-<section class="relative bg-white py-15 md:py-28 lg:py-25">
+<section
+  class="overflow-hidden min-h-[60vh] py-28 md:py-40 flex items-center justify-center"
+>
+  <!-- Full-cover background image -->
   <div
-    class="pointer-events-none absolute inset-0 z-0 opacity-60
-           bg-center bg-no-repeat
-           bg-[url('/images/online-banking-2.webp')]
-           [background-size:100%_40%]"
+    class="pointer-events-none absolute inset-0 -z-10 opacity-100
+           bg-no-repeat bg-cover bg-center
+           bg-[url('/images/testni.avif')]"
     aria-hidden="true"
   >
   </div>
 
+  <!-- Content -->
   <div class="relative z-10 container mx-auto max-w-screen-xl px-4">
-    <div
-      class="flex flex-wrap md:flex-nowrap items-center gap-10 lg:gap-16 min-h-[20vh] lg:min-h-[50vh]"
-    >
-      <!-- Left -->
-      <div class="w-full md:w-1/2 flex flex-col justify-center">
-        <span
-          class="w-fit self-start mb-6 inline-flex items-center rounded-full bg-[#9bb2f4] text-[#15164c] px-4 py-1 text-sm"
+    <div class="max-w-3xl mx-auto text-center">
+      <h1
+        class="text-white font-bold leading-tight tracking-tight text-3xl md:text-4xl lg:text-5xl"
+      >
+        Local Advertising and Digital Marketing Pros in Denver
+      </h1>
+
+      <p class="mt-6 text-xl md:text-2xl text-white">
+        Helping Businesses Get Noticed On Screens and Online
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="#"
+          class="inline-flex items-center justify-center h-12 px-6 rounded-lg bg-[#1d3dd1] text-white text-sm md:text-base font-semibold hover:bg-[#1833b2] transition"
         >
-          Premium Marketing Solutions
-        </span>
-
-        <h1
-          class="text-[#15164c] font-bold leading-tight tracking-tight text-3xl md:text-4xl lg:text-5xl"
-        >
-          Local Advertising and Digital Marketing Pros in
-          <span class="text-[#3b5de7]">Denver</span>
-        </h1>
-
-        <p class="mt-6 text-xl md:text-2xl text-[#15164c]/80 max-w-2xl">
-          Helping Businesses Get Noticed On Screens and Online
-        </p>
-
-        <div class="mt-8 flex flex-col sm:flex-row gap-4">
-          <a
-            href="#"
-            class="inline-flex items-center justify-center h-12 px-6 rounded-lg bg-[#1d3dd1] text-white text-sm md:text-base font-semibold hover:bg-[#1833b2] transition"
-          >
-            Contact Our Advertising Experts
-          </a>
-        </div>
-      </div>
-
-      <!-- Right -->
-      <div class="w-full md:w-1/2 flex justify-center md:justify-end">
-        <div class="relative w-[22rem] sm:w-[26rem] md:w-[32rem] lg:w-[36rem]">
-          <div
-            class="absolute inset-0 -z-10 hidden md:block rounded-3xl bg-[#15164c] opacity-90 rotate-[-3deg]"
-          >
-          </div>
-          <img
-            src="/images/download-5-1.avif"
-            alt="Digital signage montage"
-            class="block w-full h-auto rounded-3xl shadow-xl object-cover"
-          />
-        </div>
+          Contact Our Advertising Experts
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-[90px] bg-[#141a56]">
-  <div class="container mx-auto px-4">
-    <div class="max-w-7xl mx-auto flex flex-row gap-20">
-      <!-- LEFT: cards -->
-      <div class="w-1/2">
-        <div class="-m-1 flex flex-wrap">
-          <div class="w-full sm:w-1/2 p-1">
-            <div
-              class="h-full min-h-[140px] rounded-lg bg-[#f6f9fe] p-6 sm:p-8 flex items-center justify-center text-center"
-            >
-              <p class="text-black text-xl">
-                Ads displayed on indoor digital screens in high-traffic venues.
-              </p>
-            </div>
-          </div>
-          <div class="w-full sm:w-1/2 p-1">
-            <div
-              class="h-full min-h-[140px] rounded-lg bg-[#afc5f4] p-6 sm:p-8 flex items-center justify-center text-center"
-            >
-              <p class="text-black text-xl">
-                Targeted placements by neighborhood, audience, or venue type.
-              </p>
-            </div>
-          </div>
-          <div class="w-full sm:w-1/2 p-1">
-            <div
-              class="h-full min-h-[140px] rounded-lg bg-[#afc5f4] p-6 sm:p-8 flex items-center justify-center text-center"
-            >
-              <p class="text-black text-xl">
-                Flexible content scheduling and campaign reporting.
-              </p>
-            </div>
-          </div>
-          <div class="w-full sm:w-1/2 p-1">
-            <div
-              class="h-full min-h-[140px] rounded-lg bg-[#f6f9fe] p-6 sm:p-8 flex items-center justify-center text-center"
-            >
-              <p class="text-black text-xl">Custom motion-graphic designs.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- RIGHT: text -->
-      <div class="w-full md:w-1/2 flex flex-col justify-center">
-        <h2 class="text-4xl font-bold leading-tight text-white text-left">
-          Reach Customers with
-          <span class="text-[#3b5de7]">Indoor Digital Signage</span>
-          Across
-          <span class="text-[#3b5de7]">Denver</span>
-        </h2>
-        <p class="mt-4 text-xl text-white/80 text-left">
-          Our (CITY) based indoor advertising network puts your brand in front
-          of real people in real venues restaurants, gyms, salons, retail
-          spaces, and more. Whether you are promoting daily specials or building
-          brand awareness, our digital signage network delivers impactful,
-          highfrequency exposure where it matters most.
-        </p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-4">
-          <a
-            href="#"
-            class="inline-flex items-center justify-center h-12 px-6 rounded-lg bg-[#0a379d] text-white text-sm md:text-base font-semibold hover:bg-[#1833b2] transition"
-          >
-            Explore Our Digital Ad Services
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="relative bg-[#e0edf6] py-15 md:py-28 lg:py-25">
+<section class="relative bg-white py-15 md:py-28 lg:py-25">
   <div class="relative z-10 container mx-auto max-w-screen-xl px-4">
     <div
       class="flex flex-wrap md:flex-nowrap items-center gap-10 lg:gap-16 min-h-[20vh] lg:min-h-[50vh]"
@@ -236,14 +142,96 @@ import "../styles/global.css";
   </div>
 </section>
 
-<section class="py-16 md:py-20 bg-white">
-  <div class="container mx-auto max-w-7xl px-4">
+<section class="py-20 bg-[#eaf2ff]">
+  <div class="container mx-auto max-w-7xl px-4 text-center">
     <!-- Heading -->
-    <div class="max-w-7xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-[#1d2a5b]">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-[#1d2a5b] mb-12">
+      How do I Become a Venue Partner?
+    </h2>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-bold text-[#1d2a5b] mb-2">
+          Network Advertising
+        </h3>
+        <p class="text-black text-lg">
+          One of the most enticing advantages of the network is that your
+          venue's motion ads will be showcased in nearby non-competitive
+          locations, enabling you to reach out to customers of other venues.
+          Some of these customers might also be yours, thus enhancing your
+          top-of-mind brand awareness and sparking word-of-mouth referrals.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-bold text-[#1d2a5b] mb-2">
+          Internal Advertising
+        </h3>
+        <p class="text-black text-lg">
+          Participating in the network also provides you with the opportunity to
+          engage with your customers while they are inside your establishment.
+          Venues utilize screen time to inform, promote, or educate their
+          customers about ongoing specials, promotions, or helpful tips.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-bold text-[#1d2a5b] mb-2">Content Creation</h3>
+        <p class="text-black text-lg">
+          We handle all graphic content creation for our Venue Network Partners.
+          Just provide us with a few design elements, pictures, and messages,
+          and we’ll take it from there.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-bold text-[#1d2a5b] mb-2">
+          Access to Marketing Services
+        </h3>
+        <p class="text-black text-lg">
+          Being part of our network also provides access to a variety of
+          marketing services and our trained staff who manage them. From
+          websites and social media to pay-per-click advertising, geofencing,
+          and everything in between.
+        </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-bold text-[#1d2a5b] mb-2">Local Support</h3>
+        <p class="text-black text-lg">
+          Whether it's a simple technical question, a content change, or an
+          inquiry about marketing campaign options, we're here to meet with you
+          and service your needs.
+        </p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <h3 class="text-xl font-bold text-[#1d2a5b] mb-2">More Than Ads</h3>
+        <p class="text-black text-lg">
+          We go beyond continuous promotion of your business within the screen
+          network, offering engaging content like weather updates, trivia, and
+          fun facts to create a more enjoyable experience for customers.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 md:py-20 bg-white">
+  <div class="container mx-auto w-7xl px-4">
+    <!-- Heading -->
+    <div class="max-w-full mx-auto text-center">
+      <h2 class="text-4xl font-bold text-[#1d2a5b]">
         Boost Visibility with Our Full-Service Digital Marketing Solutions
       </h2>
-      <p class="mt-4 text-lg md:text-xl text-slate-700">
+      <p class="mt-4 text-black text-xl">
         Beyond in-venue ads, we provide full-scale digital marketing to help
         your business show up, stand out, and grow. Whether you're just getting
         started or need help scaling your outreach, we've got the tools and the
@@ -251,93 +239,184 @@ import "../styles/global.css";
       </p>
     </div>
 
-    <!-- Main Grid -->
-    <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:items-start">
-      <!-- Left: Image -->
-      <div class="">
+    <!-- Grid -->
+    <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <!-- Left: big image, spans 2 rows -->
+      <div class="relative lg:row-span-2">
+        <!-- decorative back plate -->
         <div
-          class="absolute -left-2 top-4 w-[90%] h-[10%] rounded-2xl bg-[#1d3dd1]/15 -z-10"
+          class="absolute -left-2 top-4 w-[94%] h-[94%] rounded-2xl bg-[#1d3dd1]/15 -z-10"
         >
         </div>
+
         <img
           src="/images/test2.avif"
-          alt="Team working together on marketing strategies"
-          class="w-[92%] rounded-2xl shadow-lg"
+          alt="Team working"
+          class="w-full h-full object-cover rounded-2xl shadow-lg"
         />
       </div>
 
-      <!-- Right: Cards -->
-      <div class="lg:col-span-2 flex flex-col gap-6">
-        <!-- Small cards grid -->
-        <div class="grid sm:grid-cols-2 gap-6">
-          <!-- Card 1 -->
-          <a
-            href="#"
-            class="block rounded-2xl bg-[#eaf1ff] p-12 hover:shadow-md transition"
-          >
-            <h3 class="font-bold text-[#1d2a5b] text-lg">
+      <!-- Card 1 -->
+      <a
+        href="#"
+        class="block rounded-2xl bg-[#eaf1ff] p-5 md:p-6 ring-1 ring-white/60 shadow-sm hover:shadow transition"
+      >
+        <div class="flex items-start gap-3">
+          <div class="mt-1 shrink-0">
+            <!-- G icon -->
+            <svg
+              class="w-7 h-7 text-[#1d3dd1]"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 2a10 10 0 100 20 10 10 0 000-20Zm.2 15.2c-3.1 0-5.6-2.5-5.6-5.6s2.5-5.6 5.6-5.6c1.5 0 2.8.6 3.8 1.5l-1.5 1.5c-.6-.6-1.5-1-2.4-1-2 0-3.6 1.7-3.6 3.7s1.6 3.7 3.6 3.7c1.8 0 3.1-1 3.4-2.5H12v-2h5.6c.1.4.1.8.1 1.2 0 3.2-2.2 5.1-5.5 5.1Z"
+              ></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-[#1d2a5b]">
               Google Business Profile Optimization
             </h3>
-            <p class="mt-2 text-black text-sm">
+            <p class="mt-1 text-sm text-slate-600">
               Get found on Google Maps and local search.
             </p>
-          </a>
+          </div>
+        </div>
+      </a>
 
-          <!-- Card 2 -->
-          <a
-            href="#"
-            class="block rounded-2xl bg-[#eaf1ff] p-12 hover:shadow-md transition"
-          >
-            <h3 class="font-semibold text-[#1d2a5b] text-lg">
+      <!-- Card 2 -->
+      <a
+        href="#"
+        class="block rounded-2xl bg-[#eaf1ff] p-5 md:p-6 ring-1 ring-white/60 shadow-sm hover:shadow transition"
+      >
+        <div class="flex items-start gap-3">
+          <div class="mt-1 shrink-0">
+            <!-- website icon -->
+            <svg
+              class="w-7 h-7 text-[#1d3dd1]"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2" stroke-width="2"
+              ></rect>
+              <path d="M3 9h18" stroke-width="2"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-[#1d2a5b]">
               Website Design &amp; SEO
             </h3>
-            <p class="mt-2 text-black text-sm">
+            <p class="mt-1 text-sm text-slate-600">
               Fast, mobile-ready websites built for performance.
             </p>
-          </a>
+          </div>
+        </div>
+      </a>
 
-          <!-- Card 3 -->
-          <a
-            href="#"
-            class="block rounded-2xl bg-[#eaf1ff] p-12 hover:shadow-md transition"
-          >
-            <h3 class="font-semibold text-[#1d2a5b] text-lg">
-              Social Media Content
-            </h3>
-            <p class="mt-2 text-black text-sm">
+      <!-- Card 3 -->
+      <a
+        href="#"
+        class="block rounded-2xl bg-[#eaf1ff] p-5 md:p-6 ring-1 ring-white/60 shadow-sm hover:shadow transition"
+      >
+        <div class="flex items-start gap-3">
+          <div class="mt-1 shrink-0">
+            <!-- hashtag icon -->
+            <svg
+              class="w-7 h-7 text-[#1d3dd1]"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                d="M5 9h14M5 15h14M9 3L7 21M17 3l-2 18"
+                stroke-width="2"
+                stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-[#1d2a5b]">Social Media Content</h3>
+            <p class="mt-1 text-sm text-slate-600">
               Consistent posting and creative to grow your presence.
             </p>
-          </a>
+          </div>
+        </div>
+      </a>
 
-          <!-- Card 4 -->
-          <a
-            href="#"
-            class="block rounded-2xl bg-[#eaf1ff] p-14 hover:shadow-md transition"
-          >
-            <h3 class="font-semibold text-[#1d2a5b] text-lg">
+      <!-- Card 4 -->
+      <a
+        href="#"
+        class="block rounded-2xl bg-[#eaf1ff] p-5 md:p-6 ring-1 ring-white/60 shadow-sm hover:shadow transition"
+      >
+        <div class="flex items-start gap-3">
+          <div class="mt-1 shrink-0">
+            <!-- arrow icon -->
+            <svg
+              class="w-7 h-7 text-[#1d3dd1]"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                d="M5 12h14M13 5l7 7-7 7"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-[#1d2a5b]">
               Pay-Per-Click Advertising
             </h3>
-            <p class="mt-2 text-black text-sm">
+            <p class="mt-1 text-sm text-slate-600">
               Targeted ads that drive calls, clicks, and leads.
             </p>
-          </a>
+          </div>
         </div>
+      </a>
 
-        <!-- "Check out all our Solutions" card -->
-        <a
-          href="#"
-          class="block rounded-2xl bg-[#eaf1ff] p-12 md:p-8 ring-1 ring-white/60 shadow-sm hover:shadow-md transition"
-        >
-          <h3 class="font-semibold text-[#1d2a5b] text-lg">
-            Check out all our Solutions
-          </h3>
-          <p class="mt-2 text-slate-600 text-sm">
-            Explore tailored services designed to boost visibility, drive leads,
-            and grow your business. Each solution is crafted to deliver real,
-            measurable results.
-          </p>
-        </a>
-      </div>
+      <!-- Bottom wide card (spans full width on large screens) -->
+      <a
+        href="#"
+        class="lg:col-span-3 rounded-2xl bg-[#eaf1ff] p-5 md:p-6 ring-1 ring-white/60 shadow-sm hover:shadow transition"
+      >
+        <div class="flex items-start gap-3">
+          <div class="mt-1 shrink-0">
+            <!-- sparkles / info icon -->
+            <svg
+              class="w-7 h-7 text-[#1d3dd1]"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 3l1.8 3.7L18 8l-3.7 1.8L12 14l-1.8-4.2L6 8l4.2-1.3L12 3Zm7 9l.9 1.8L22 15l-2.1.2L19 18l-.9-2.8L16 15l2.1-1.2L19 11ZM5 13l.9 1.8L8 15l-2.1.2L5 18l-.9-2.8L2 15l2.1-1.2L5 13Z"
+              ></path>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-semibold text-[#1d2a5b]">
+              Check out all our Solutions
+            </h3>
+            <p class="mt-1 text-sm text-slate-600">
+              Explore tailored services designed to boost visibility, drive
+              leads, and grow your business. Each solution is crafted to deliver
+              real, measurable results.
+            </p>
+          </div>
+          <!-- small accent badge -->
+          <div
+            class="hidden sm:flex items-center justify-center w-10 h-10 rounded-full bg-[#ffede3] text-[#e0592a]"
+          >
+            <!-- heart/check -->
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 21s-7.5-4.4-9.8-8.2C.6 10.4 2.3 7 5.7 7c1.8 0 3 .9 3.8 2 .8-1.1 2-2 3.8-2 3.4 0 5.1 3.4 3.5 5.8C19.5 16.6 12 21 12 21z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
