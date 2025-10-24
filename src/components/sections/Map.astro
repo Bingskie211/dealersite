@@ -1,0 +1,190 @@
+<!-- ✅ Include Leaflet CDN (must come before map script) -->
+<link                                             
+  rel="stylesheet"     
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""
+/>
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""
+></script>
+
+<!-- Map Section -->
+<section class="" x-data="{}">
+  <!-- FULL-WIDTH WRAPPER -->
+  <div class="relative overflow-hidden bg-[#0b1a3b]">
+    <!-- Two-column layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2">
+      <!-- LEFT: Map -->
+      <div class="relative h-[560px] md:h-[640px]">
+        <div id="denverMap" class="h-full w-full"></div>
+      </div>
+
+      <!-- RIGHT: Text with building background -->
+      <div class="relative flex items-center justify-center bg-[#0b1a3b]">
+        <!-- Background image + overlay only for this column -->
+        <div
+          class="absolute inset-0 bg-center bg-cover opacity-90"
+          style="background-image: url('/images/building.webp');"
+          aria-hidden="true"
+        ></div>
+        <div class="absolute inset-0 bg-[#0b1a3b]/80"></div>
+
+        <!-- Text content -->
+        <div class="relative z-10 px-6 py-10 sm:px-10 lg:px-16 xl:px-24">
+          <h2
+            class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight"
+          >
+            We Put Local Brands on the Map
+          </h2>
+          <p class="mt-5 text-white/90 text-lg sm:text-xl max-w-2xl">
+            Targeted advertising for Denver-area businesses ready to stand out
+            and scale.
+          </p>
+
+          <ul class="mt-10 space-y-5 text-white text-xl">
+            <li class="flex items-center gap-4">
+              <svg
+                class="h-7 w-7 shrink-0 "
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+            fill= "none"
+                stroke="#ef4444"
+              >
+                <path
+                  stroke-width="1.5"
+                  d="M12 22s7-7.09 7-12a7 7 0 1 0-14 0c0 4.91 7 12 7 12Z"
+                ></path>
+                <circle cx="12" cy="10" r="2.75" stroke-width="1.5"></circle>
+              </svg>
+              <span class="font-semibold">Aurora</span>
+            </li>
+
+            <li class="flex items-center gap-4">
+              <svg
+                class="h-7 w-7 shrink-0 text-[#f97316]"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#ef4444"
+              >
+                <path
+                  stroke-width="1.5"
+                  d="M12 22s7-7.09 7-12a7 7 0 1 0-14 0c0 4.91 7 12 7 12Z"
+                ></path>
+                <circle cx="12" cy="10" r="2.75" stroke-width="1.5"></circle>
+              </svg>
+              <span class="font-semibold">Lakewood</span>
+            </li>
+
+            <li class="flex items-center gap-4">
+              <svg
+                class="h-7 w-7 shrink-0 text-[#f97316]"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#ef4444"
+              >
+                <path
+                  stroke-width="1.5"
+                  d="M12 22s7-7.09 7-12a7 7 0 1 0-14 0c0 4.91 7 12 7 12Z"
+                ></path>
+                <circle cx="12" cy="10" r="2.75" stroke-width="1.5"></circle>
+              </svg>
+              <span class="font-semibold">Arvada</span>
+            </li>
+
+            <li class="flex items-center gap-4">
+              <svg
+                class="h-7 w-7 shrink-0 text-[#f97316]"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#ef4444"
+              >
+                <path
+                  stroke-width="1.5"
+                  d="M12 22s7-7.09 7-12a7 7 0 1 0-14 0c0 4.91 7 12 7 12Z"
+                ></path>
+                <circle cx="12" cy="10" r="2.75" stroke-width="1.5"></circle>
+              </svg>
+              <span class="font-semibold">Centennial</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Leaflet Map Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // @ts-ignore - Leaflet is loaded via CDN
+    if (!window.L) {
+      console.error("Leaflet not loaded");
+      return;
+    }
+
+    // @ts-ignore - Leaflet is loaded via CDN
+    const map = L.map("denverMap", { zoomControl: true }).setView(
+      [39.7392, -104.9903],
+      11
+    );
+
+    // @ts-ignore - Leaflet is loaded via CDN
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: "&copy; OpenStreetMap contributors",
+    }).addTo(map);
+
+    // Demo boundaries
+    const areas = [
+      [
+        [39.78, -105.08],
+        [39.78, -104.91],
+        [39.68, -104.91],
+        [39.68, -105.08],
+      ],
+      [
+        [39.75, -105.16],
+        [39.75, -105.07],
+        [39.68, -105.07],
+        [39.68, -105.16],
+      ],
+      [
+        [39.83, -105.14],
+        [39.83, -105.03],
+        [39.79, -105.03],
+        [39.79, -105.14],
+      ],
+      [
+        [39.76, -104.9],
+        [39.76, -104.74],
+        [39.66, -104.74],
+        [39.66, -104.9],
+      ],
+      [
+        [39.63, -104.97],
+        [39.63, -104.84],
+        [39.58, -104.84],
+        [39.58, -104.97],
+      ],
+    ];
+
+    // @ts-ignore - Leaflet is loaded via CDN
+    const group = L.featureGroup().addTo(map);
+    areas.forEach((coords) => {
+      // @ts-ignore - Leaflet is loaded via CDN
+      L.polygon(coords, {
+        color: "#f97316",
+        weight: 2.5,
+        fillOpacity: 0,
+      }).addTo(group);
+    });
+
+    map.fitBounds(group.getBounds(), { padding: [20, 20] });
+  });
+</script>

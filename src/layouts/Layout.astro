@@ -2,7 +2,12 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<meta name="theme-color" content="#15164c" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
@@ -18,5 +23,30 @@
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+		text-size-adjust: 100%;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	
+	/* Ensure touch targets are at least 44px */
+	button, 
+	a, 
+	input, 
+	select, 
+	textarea {
+		min-height: 44px;
+		min-width: 44px;
+	}
+	
+	/* Improve touch scrolling on iOS */
+	* {
+		-webkit-overflow-scrolling: touch;
+	}
+	
+	/* Prevent horizontal scroll on mobile */
+	body {
+		overflow-x: hidden;
 	}
 </style>

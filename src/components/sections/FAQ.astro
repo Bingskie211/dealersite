@@ -1,0 +1,110 @@
+---
+// FAQ Component
+---
+
+<!-- FAQ Section-->
+<section class="py-20" x-data="{ active: null }">
+  <div class="mx-auto px-4 md:px-8 lg:px-16 max-w-[90rem]">
+    <!-- Heading -->
+    <div class="mx-auto max-w-7xl text-center mb-16">
+      <h2 class="text-5xl font-bold leading-tight text-black">FAQs</h2>
+    </div>
+
+    <!-- Accordion List -->
+    <div class="mx-auto max-w-5xl space-y-6">
+      
+      <!-- Item 1 -->
+      <div class="bg-[#e0edf6] border border-[#cbd8e6]/40 rounded-2xl overflow-hidden">
+        <button
+          x-on:click="active === 1 ? active = null : active = 1"
+          class="w-full flex justify-between items-center px-6 py-6 text-left text-black font-medium focus:outline-none"
+        >
+          <span class="text-lg font-semibold">What is Indoor Digital Signage Advertising?</span>
+          <svg
+            class="w-5 h-5 text-black transform transition-transform duration-300"
+            x-bind:class="active === 1 ? 'rotate-180' : 'rotate-0'"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div
+          class="grid transition-all duration-500 ease-in-out"
+          x-bind:style="active === 1 ? 'grid-template-rows: 1fr;' : 'grid-template-rows: 0fr;'"
+        >
+          <div class="overflow-hidden">
+            <div class="px-6 pb-6 text-lg leading-relaxed text-neutral-800">
+              It's the placement of your ads on TV screens located inside high-traffic venues, offering brand visibility where people are already engaged.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="bg-[#e0edf6] border border-[#cbd8e6]/40 rounded-2xl overflow-hidden">
+        <button
+          x-on:click="active === 2 ? active = null : active = 2"
+          class="w-full flex justify-between items-center px-6 py-6 text-left text-black font-medium focus:outline-none"
+        >
+          <span class="text-lg font-semibold">Do you offer packages that include screens and online ads?</span>
+          <svg
+            class="w-5 h-5 text-black transform transition-transform duration-300"
+            x-bind:class="active === 2 ? 'rotate-180' : 'rotate-0'"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div
+          class="grid transition-all duration-500 ease-in-out"
+          x-bind:style="active === 2 ? 'grid-template-rows: 1fr;' : 'grid-template-rows: 0fr;'"
+        >
+          <div class="overflow-hidden">
+            <div class="px-6 pb-6 text-lg leading-relaxed text-neutral-800">
+              Yes, we offer comprehensive packages that combine indoor digital signage with online advertising solutions.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="bg-[#e0edf6] border border-[#cbd8e6]/40 rounded-2xl overflow-hidden">
+        <button
+          x-on:click="active === 3 ? active = null : active = 3"
+          class="w-full flex justify-between items-center px-6 py-6 text-left text-black font-medium focus:outline-none"
+        >
+          <span class="text-lg font-semibold">Can you help my business rank on Google?</span>
+          <svg
+            class="w-5 h-5 text-black transform transition-transform duration-300"
+            x-bind:class="active === 3 ? 'rotate-180' : 'rotate-0'"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <div
+          class="grid transition-all duration-500 ease-in-out"
+          x-bind:style="active === 3 ? 'grid-template-rows: 1fr;' : 'grid-template-rows: 0fr;'"
+        >
+          <div class="overflow-hidden">
+            <div class="px-6 pb-6 text-lg leading-relaxed text-neutral-800">
+              Absolutely! We specialize in Google Business Profile optimization, local SEO, and search engine marketing to improve your online visibility.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>                          
+  </div>
+</section>
