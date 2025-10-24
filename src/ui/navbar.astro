@@ -7,7 +7,7 @@
     <!-- Logo -->
     <div class="navbar-logo">
       <a href="/" class="logo-link">
-        <img src="/images/TOP-SHELF-Advertising.webp" alt="Top Shelf Advertising" class="logo-image" />
+        <img src="/images/TOP-SHELF-Advertising.webp" alt="Top Shelf Advertising - Denver Digital Marketing and Indoor Signage" class="logo-image" loading="eager" decoding="async" width="200" height="60" />
       </a>
     </div>
 
@@ -563,6 +563,16 @@
 <script>
   // Clean Modern Navbar Class
   class CleanNavbar {
+    hamburgerMenu: HTMLElement | null;
+    navbarMenu: HTMLElement | null;
+    navbar: HTMLElement | null;
+    dropdownToggles: NodeListOf<Element>;
+    dropdowns: NodeListOf<Element>;
+    navLinks: NodeListOf<Element>;
+    isMenuOpen: boolean;
+    activeDropdown: Element | null;
+    scrollThreshold: number;
+
     constructor() {
       this.hamburgerMenu = document.getElementById('hamburger-menu');
       this.navbarMenu = document.getElementById('navbar-menu');
@@ -587,24 +597,24 @@
     bindEvents() {
       // Hamburger menu functionality
       this.hamburgerMenu?.addEventListener('click', this.toggleMobileMenu.bind(this));
-      this.hamburgerMenu?.addEventListener('keydown', this.handleKeydown.bind(this));
+      this.hamburgerMenu?.addEventListener('keydown', this.handleKeydown.bind(this) as EventListener);
 
       // Dropdown functionality
-      this.dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', this.handleDropdownClick.bind(this));
-        toggle.addEventListener('keydown', this.handleDropdownKeydown.bind(this));
+      this.dropdownToggles.forEach((toggle: Element) => {
+        toggle.addEventListener('click', this.handleDropdownClick.bind(this) as EventListener);
+        toggle.addEventListener('keydown', this.handleDropdownKeydown.bind(this) as EventListener);
       });
 
       // Navigation link clicks (mobile)
-      this.navLinks.forEach(link => {
+      this.navLinks.forEach((link: Element) => {
         link.addEventListener('click', this.handleNavLinkClick.bind(this));
       });
 
       // Global event listeners
       document.addEventListener('click', this.handleOutsideClick.bind(this));
       window.addEventListener('resize', this.handleResize.bind(this));
-      window.addEventListener('scroll', this.throttle(this.handleScroll.bind(this), 16));
-      document.addEventListener('keydown', this.handleEscape.bind(this));
+      window.addEventListener('scroll', this.throttle(this.handleScroll.bind(this), 16) as EventListener);
+      document.addEventListener('keydown', this.handleEscape.bind(this) as EventListener);
       
       // Page visibility change
       document.addEventListener('visibilitychange', this.handleVisibilityChange.bind(this));
@@ -614,7 +624,7 @@
       // Set initial ARIA attributes
       this.hamburgerMenu?.setAttribute('aria-expanded', 'false');
       
-      this.dropdownToggles.forEach(toggle => {
+      this.dropdownToggles.forEach((toggle: Element) => {
         toggle.setAttribute('aria-expanded', 'false');
       });
     }
@@ -637,21 +647,22 @@
       }
     }
 
-    handleKeydown(e) {
+    handleKeydown(e: KeyboardEvent): void {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         this.toggleMobileMenu();
       }
     }
 
-    handleDropdownClick(e) {
+    handleDropdownClick(e: Event): void {
       if (window.innerWidth <= 768) {
         e.preventDefault();
-        const dropdown = e.target.closest('.dropdown');
+        const target = e.target as HTMLElement;
+        const dropdown = target?.closest('.dropdown');
         const isActive = dropdown?.classList.contains('active');
         
         // Close all other dropdowns
-        this.dropdowns.forEach(d => {
+        this.dropdowns.forEach((d: Element) => {
           if (d !== dropdown) {
             d.classList.remove('active');
             d.querySelector('.dropdown-toggle')?.setAttribute('aria-expanded', 'false');
@@ -660,28 +671,29 @@
         
         // Toggle current dropdown
         dropdown?.classList.toggle('active');
-        e.target.setAttribute('aria-expanded', (!isActive).toString());
+        target.setAttribute('aria-expanded', (!isActive).toString());
         
         this.activeDropdown = isActive ? null : dropdown;
       }
     }
 
-    handleDropdownKeydown(e) {
+    handleDropdownKeydown(e: KeyboardEvent): void {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         this.handleDropdownClick(e);
       }
     }
 
-    handleNavLinkClick() {
+    handleNavLinkClick(): void {
       if (window.innerWidth <= 768 && this.isMenuOpen) {
         this.closeMobileMenu();
       }
     }
 
-    handleOutsideClick(e) {
-      const isClickInsideNav = this.hamburgerMenu?.contains(e.target) || 
-                              this.navbarMenu?.contains(e.target);
+    handleOutsideClick(e: Event): void {
+      const target = e.target as HTMLElement;
+      const isClickInsideNav = this.hamburgerMenu?.contains(target) || 
+                              this.navbarMenu?.contains(target);
       
       if (!isClickInsideNav) {
         this.closeMobileMenu();
@@ -689,33 +701,33 @@
       }
     }
 
-    handleResize() {
+    handleResize(): void {
       if (window.innerWidth > 768) {
         this.closeMobileMenu();
         this.closeAllDropdowns();
       }
     }
 
-    handleScroll() {
+    handleScroll(e?: Event): void {
       const scrolled = window.scrollY > this.scrollThreshold;
       this.navbar?.classList.toggle('scrolled', scrolled);
     }
 
-    handleEscape(e) {
+    handleEscape(e: KeyboardEvent): void {
       if (e.key === 'Escape') {
         this.closeMobileMenu();
         this.closeAllDropdowns();
       }
     }
 
-    handleVisibilityChange() {
+    handleVisibilityChange(): void {
       if (document.hidden) {
         this.closeMobileMenu();
         this.closeAllDropdowns();
       }
     }
 
-    closeMobileMenu() {
+    closeMobileMenu(): void {
       this.isMenuOpen = false;
       this.hamburgerMenu?.classList.remove('active');
       this.navbarMenu?.classList.remove('active');
@@ -723,8 +735,8 @@
       document.body.style.overflow = '';
     }
 
-    closeAllDropdowns() {
-      this.dropdowns.forEach(dropdown => {
+    closeAllDropdowns(): void {
+      this.dropdowns.forEach((dropdown: Element) => {
         dropdown.classList.remove('active');
         dropdown.querySelector('.dropdown-toggle')?.setAttribute('aria-expanded', 'false');
       });
@@ -732,13 +744,11 @@
     }
 
     // Utility function for throttling
-    throttle(func, limit) {
-      let inThrottle;
-      return function() {
-        const args = arguments;
-        const context = this;
+    throttle<T extends (...args: any[]) => void>(func: T, limit: number): (this: any, ...args: Parameters<T>) => void {
+      let inThrottle: boolean;
+      return function(this: any, ...args: Parameters<T>) {
         if (!inThrottle) {
-          func.apply(context, args);
+          func.apply(this, args);
           inThrottle = true;
           setTimeout(() => inThrottle = false, limit);
         }
